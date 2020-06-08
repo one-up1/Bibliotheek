@@ -33,11 +33,12 @@
             Content="Boeknummer:" />
 
         <TextBox
+            Name="tbIsbn"
             Grid.Row="0"
             Grid.Column="1"
             VerticalContentAlignment="Center"
             Margin="6"
-            Name="tbIsbn" />
+            FontSize="14" />
 
         <Label
             Grid.Row="1"
