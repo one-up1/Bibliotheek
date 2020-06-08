@@ -1,0 +1,79 @@
+﻿<Window x:Class="Bibliotheek.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Width="275"
+        Height="200"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        Title="Bibliotheek"
+        Loaded="Window_Loaded"
+        KeyDown="Window_KeyDown">
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36" />
+            <RowDefinition Height="38" />
+            <RowDefinition Height="38" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="92" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.Row="0"
+            Grid.Column="0"
+            VerticalContentAlignment="Center"
+            Content="Boeknummer:" />
+
+        <TextBox
+            Grid.Row="0"
+            Grid.Column="1"
+            VerticalContentAlignment="Center"
+            Margin="6"
+            Name="tbIsbn" />
+
+        <Label
+            Grid.Row="1"
+            Grid.Column="0"
+            VerticalContentAlignment="Center"
+            Content="Uitleendatum:" />
+
+        <DatePicker
+            Name="dpRentalDate"
+            Grid.Row="1"
+            Grid.Column="1"
+            VerticalContentAlignment="Center"
+            Margin="6" />
+
+        <Label
+            Grid.Row="2"
+            Grid.Column="0"
+            VerticalContentAlignment="Center"
+            Content="Retourdatum:" />
+
+        <DatePicker
+            Name="dpReturnDate"
+            Grid.Row="2"
+            Grid.Column="1"
+            VerticalContentAlignment="Center"
+            Margin="6" />
+
+        <Button
+            Name="button"
+            Grid.Row="3"
+            Grid.ColumnSpan="2"
+            Margin="6"
+            Content="OK"
+            Click="button_Click" />
+
+
+    </Grid>
+    
+</Window>
