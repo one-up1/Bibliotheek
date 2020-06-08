@@ -100,7 +100,7 @@ namespace Bibliotheek
             }
 
             // Toon resultaat.
-            string caption = days + " dagen";
+            string caption = FormatDayCount(days);
             if (fine == 0)
             {
                 MessageBox.Show("Geen boete!", caption,
@@ -108,10 +108,20 @@ namespace Bibliotheek
             }
             else
             {
-                MessageBox.Show(daysOverdue + " dagen te laat, € " +
+                MessageBox.Show(FormatDayCount(daysOverdue) + " te laat, € " +
                     fine.ToString("0.00") + " boete!", caption,
                     MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+        }
+
+        private static string FormatDayCount(double days)
+        {
+            string ret = days.ToString() + " dag";
+            if (days != 1)
+            {
+                ret += "en";
+            }
+            return ret;
         }
     }
 }
